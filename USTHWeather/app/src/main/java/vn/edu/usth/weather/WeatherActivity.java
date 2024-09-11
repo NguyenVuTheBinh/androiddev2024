@@ -5,6 +5,8 @@ import android.util.Log;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -20,8 +22,20 @@ public class WeatherActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        aForecastFragment firstFragment = new aForecastFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.forecast_frag, firstFragment).commit();
+
+        // creating and initializing variable for fragment transaction.
+        FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+
+        Fragment fragment1 = new WeatherFragment();
+        ft.add(R.id.upperContainer, fragment1, "fragment1");
+
+        Fragment fragment2 = new aForecastFragment();
+        ft.add(R.id.lowerContainer, fragment2, "fragment2");
+
+        // committing the transaction.
+        ft.commit();
+//        aForecastFragment firstFragment = new aForecastFragment();
+//        getSupportFragmentManager().beginTransaction().add(R.id.forecast_frag, firstFragment).commit();
     }
 
     @Override

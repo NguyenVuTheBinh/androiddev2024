@@ -5,12 +5,231 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".aForecastFragment"    >
-
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#ADD8E6"
+                android:padding="8dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Mon"
+                        android:textSize="25dp"/>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:src="@drawable/cloudynew" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Tue"
+                        android:textSize="25dp"/>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:src="@drawable/cloudynew" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Showers \n 23C - 30C"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Wed"
+                        android:textSize="25dp"/>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:src="@drawable/flood" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Hanoi \n 23C - 26C"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Thu"
+                        android:textSize="25dp"/>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:src="@drawable/cloudynew" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Fri"
+                        android:textSize="25dp"/>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:src="@drawable/cloudynew" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Sat"
+                        android:textSize="25dp"/>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:src="@drawable/cloudynew" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Sun"
+                        android:textSize="25dp"/>
+
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:src="@drawable/cloudynew" />
+
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8px"
+                        android:paddingRight="8px"
+                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:textSize="25dp"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
 
 </FrameLayout>

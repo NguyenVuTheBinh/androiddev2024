@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#44db56"
+    android:padding="8dp"
+    tools:context=".WeatherFragment">
+
+    <!-- creating a text view for displaying the text for parent activity-->
+    <TextView
+        android:id="@+id/idTVHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="Weather today: \nWed"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:layout_width="242dp"
+        android:layout_height="242dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/flood">
+    </ImageView>
+
+    <!-- creating a frame layout for displaying a child fragment -->
+    <FrameLayout
+        android:id="@+id/childFragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/idTVHeading"
+        android:layout_marginTop="-2dp"></FrameLayout>
+</RelativeLayout>
