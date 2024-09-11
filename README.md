@@ -7,4 +7,4 @@ Student Info
 * Name: Nguyễn Vũ Thế Bình
 * ID: BA12-022
 * Group ID: 11
-* Project Name: 10
+* Project Name: Email Client
