@@ -15,7 +15,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="#ADD8E6"
+                android:background="@color/light_blue"
                 android:padding="8dp">
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -28,7 +28,8 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Mon"
+                        android:text="@string/monday"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
 
 
@@ -44,7 +45,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:text="@string/cloud"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -58,7 +60,8 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Tue"
+                        android:text="@string/tuesday"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
 
 
@@ -74,7 +77,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Showers \n 23C - 30C"
+                        android:text="@string/cloud"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -88,7 +92,8 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Wed"
+                        android:text="@string/wednesday"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
 
 
@@ -104,7 +109,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Hanoi \n 23C - 26C"
+                        android:text="@string/flood"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -118,7 +124,8 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Thu"
+                        android:text="@string/thursday"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
 
 
@@ -134,7 +141,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:text="@string/cloud"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -148,7 +156,8 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Fri"
+                        android:text="@string/friday"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
 
 
@@ -164,7 +173,8 @@
                         android:layout_height="wrap_content"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:text="@string/cloud"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -178,7 +188,8 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Sat"
+                        android:text="@string/saturday"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
 
 
@@ -187,14 +198,15 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:src="@drawable/cloudynew" />
+                        android:src="@drawable/sunny" />
 
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:text="@string/sunny"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
                 </LinearLayout>
                 <LinearLayout
@@ -208,7 +220,8 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Sun"
+                        android:text="@string/sunday"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
 
 
@@ -217,14 +230,15 @@
                         android:layout_height="match_parent"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:src="@drawable/cloudynew" />
+                        android:src="@drawable/sunny" />
 
                     <TextView
                         android:layout_width="200dp"
                         android:layout_height="wrap_content"
                         android:paddingLeft="8px"
                         android:paddingRight="8px"
-                        android:text="Parley Cloudy \n 26C - 30C"
+                        android:text="@string/sunny"
+                        android:textColor="@color/black"
                         android:textSize="25dp"/>
                 </LinearLayout>
 

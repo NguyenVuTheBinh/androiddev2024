@@ -3,20 +3,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="380dp"
-    android:background="#999999"
+    android:background="@color/gray"
     android:padding="8dp"
     tools:context=".WeatherFragment">
 
     <!-- creating a text view for displaying the text for parent activity-->
     <TextView
-        android:id="@+id/idTVHeading"
+        android:id="@+id/today"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:text="Weather today: \nWed"
+        android:text="@string/today"
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold" />
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="@string/wednesday"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/today"
+        />
 
     <ImageView
         android:layout_width="242dp"
