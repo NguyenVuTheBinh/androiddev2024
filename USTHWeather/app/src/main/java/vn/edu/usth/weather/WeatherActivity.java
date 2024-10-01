@@ -1,5 +1,6 @@
 package vn.edu.usth.weather;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
 
@@ -16,9 +17,12 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import java.io.InputStream;
+
 import com.google.android.material.tabs.TabLayout;
 
 public class WeatherActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,11 +38,15 @@ public class WeatherActivity extends AppCompatActivity {
         WeatherPagerAdapter pagerAdapter = new WeatherPagerAdapter(getSupportFragmentManager());
         viewPager.setAdapter(pagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
+        MediaPlayer music = MediaPlayer.create(WeatherActivity.this, R.raw.march7theme);
+        music.start();
+
 
 
 //        aForecastFragment firstFragment = new aForecastFragment();
 //        getSupportFragmentManager().beginTransaction().add(R.id.forecast_frag, firstFragment).commit();
     }
+
 
     @Override
     protected void onStart() {
