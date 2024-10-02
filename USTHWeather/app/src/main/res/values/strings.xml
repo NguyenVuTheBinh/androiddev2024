@@ -14,4 +14,6 @@
     <string name="flood">flood \n 17C - 22C</string>
     <string name="sunny">sunny \n 28C - 33C</string>
     <string name="today">weather today:</string>
+    <string name="refresh_message">Refresh...</string>
+    <string name="fetch_success">Fetch_success</string>
 </resources>

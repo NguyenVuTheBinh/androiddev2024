@@ -3,6 +3,9 @@ package vn.edu.usth.weather;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
+import android.os.Message;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,7 +30,8 @@ import java.io.InputStream;
 import com.google.android.material.tabs.TabLayout;
 
 public class WeatherActivity extends AppCompatActivity {
-
+    private static final String SERVER_RESPONSE = "server_response";
+    private static int duration;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,9 +124,34 @@ public class WeatherActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
+        duration = Toast.LENGTH_LONG;
         if (id == R.id.action_refresh) {
+            Handler handler = new Handler(Looper.getMainLooper()) {
+              @Override
+              public void handleMessage(Message msg) {
+                  String content = msg.getData().getString(SERVER_RESPONSE);
+                  Toast.makeText(getBaseContext(), content, duration).show();
+              }
+            };
+            Thread t = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
-            Toast.makeText(this, "Refreshed!", Toast.LENGTH_SHORT).show();
+                    Bundle bundle = new Bundle();
+                    bundle.putString(SERVER_RESPONSE, getString(R.string.fetch_success));
+
+                    Message msg = new Message();
+                    msg.setData(bundle);
+                    handler.sendMessage(msg);
+                }
+            });
+            t.start();
+            Toast.makeText(getBaseContext(), R.string.refresh_message, Toast.LENGTH_LONG).show();
             return true;
         } else if (id == R.id.action_settings) {
 

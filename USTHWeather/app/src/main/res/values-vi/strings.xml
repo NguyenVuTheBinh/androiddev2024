@@ -15,4 +15,6 @@
     <string name="flood">ngập lụt \n 17C - 22C</string>
     <string name="sunny">có nắng \n 28C - 33C</string>
     <string name="today">thời tiết hôm nay:</string>
+    <string name="refresh_message">Tải lại...</string>
+    <string name="fetch_success">Đã thấy</string>
 </resources>
