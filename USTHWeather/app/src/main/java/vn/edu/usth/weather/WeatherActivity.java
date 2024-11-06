@@ -13,6 +13,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -39,9 +40,14 @@ import java.net.HttpURLConnection;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.android.material.tabs.TabLayout;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import javax.xml.datatype.Duration;
 
@@ -121,7 +127,7 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         duration = Toast.LENGTH_LONG;
-        if (id == R.id.action_refresh) {
+        if (id == R.id.action_changeInFragment) {
             imageDownload();
             return true;
 
@@ -129,6 +135,9 @@ public class WeatherActivity extends AppCompatActivity {
 
             Intent intent = new Intent(this, PrefActivity.class);
             startActivity(intent);
+            return true;
+        } else if (id == R.id.action_refresh) {
+            JsonTest();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -155,6 +164,33 @@ public class WeatherActivity extends AppCompatActivity {
                 Bitmap.Config.ARGB_8888, null);
         // go!
         queue.add(imageRequest);
+    }
+
+    private void JsonTest(){
+        TextView tv = findViewById(R.id.show_text);
+        String url = "https://api.openweathermap.org/data/2.5/weather?lat=21.02&lon=105.85&appid=myAPIkey&units=metric";
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, null, new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONObject obj = response.getJSONObject("main");
+                    Double temp = obj.getDouble("temp");
+                    String feels_like = obj.getString("feels_like");
+                    //int id = response.getInt("id");
+                    String city = response.getString("name");
+                    tv.setText("City: "+city+"\nTemparature in Celsius: "+temp+"\nWeather feels like: "+feels_like);
+                } catch (JSONException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                tv.setText("error");
+            }
+        });
+        RequestQueue requestQueueTwo = Volley.newRequestQueue(this);
+        requestQueueTwo.add(jsonObjectRequest);
     }
 
 
